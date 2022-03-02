@@ -5,8 +5,8 @@
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="post-heading">
-                    <h1>this is title</h1>
-                    <span class="meta"> Posted by codepresso </span>
+                    <h1>{{post.title}}</h1>
+                    <span class="meta"> Posted by {{post.username}} </span>
                 </div>
             </div>
         </div>
@@ -17,9 +17,9 @@
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center border-bottom pb-5">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <p>this is content</p>
+                <p>{{post.content}}</p>
                 <div class="edit_btns">
-                    <button><a href="#">수정</a></button>
+                    <button><a href="/post/edit/{{id}}">수정</a></button>
                     <button>삭제</button>
                 </div>
             </div>

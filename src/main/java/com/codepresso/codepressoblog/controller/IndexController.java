@@ -18,7 +18,7 @@ public class IndexController {
 
     @RequestMapping(value = "/")
     public String index(Model model) {
-        List<Post> postList = postService.getAllPost();
+        List<Post> postList = postService.getPostByPage(1, 5);
         model.addAttribute("posts", postList);
         return "index";
     }

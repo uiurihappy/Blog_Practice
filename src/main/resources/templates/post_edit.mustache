@@ -16,9 +16,9 @@
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center border-bottom pb-5">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <input type="text" id="edit-post-title" class="edit mb-2" style="height: 30px;"  value="this is title"/>
-                <textarea class="edit" name="" id="edit-post-content" cols="30" rows="10">this is content</textarea>
-                <input type="hidden" id="edit-post-id" value="1" />
+                <input type="text" id="edit-post-title" class="edit mb-2" style="height: 30px;"  value="{{post.title}}"/>
+                <textarea class="edit" name="" id="edit-post-content" cols="30" rows="10">{{post.content}}</textarea>
+                <input type="hidden" id="edit-post-id" value="{{post.id}}" />
                 <div class="comment_btn">
                     <button id="edit_button">수정</button>
                 </div>

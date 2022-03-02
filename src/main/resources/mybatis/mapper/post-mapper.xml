@@ -8,12 +8,30 @@
         FROM post
         ORDER BY id DESC
     </select>
+    
     <select id="findByPage" resultType="com.codepresso.codepressoblog.vo.Post">
         SELECT *
         FROM post
         ORDER BY id DESC
         LIMIT #{limit} OFFSET #{offset}
     </select>
+    
+    <select id="findOne" resultType="com.codepresso.codepressoblog.vo.Post">
+        SELECT *
+        FROM post
+        WHERE id=#{id};
+    </select>
+    
+    <insert id="save">
+        INSERT INTO post(title, content, username)
+        VALUES (#{post.title}, #{post.content}, #{post.username});
+    </insert>
+
+    <update id="update">
+        UPDATE post
+        SET title=#{post.title}, content=#{post.content}
+        WHERE id=#{post.id};
+    </update>
 
 </mapper>
 
